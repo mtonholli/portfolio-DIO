@@ -1,0 +1,41 @@
+/* Estilização da subcategoria Portfolio */
+
+.portfolio {
+    margin: 0;
+    padding: 0 0 0 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.portfolio li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 1.5rem;
+}
+
+.portfolio li .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.portfolio li .title.github::before {
+    content:'';
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/icons/github.svg');
+    margin-right: .5rem;
+}
+
+.portfolio li .title.github{
+    margin: 0 0 .75rem .5rem;
+}

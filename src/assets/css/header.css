@@ -1,0 +1,159 @@
+/* Estilização da parte superior do painel */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    padding: 1rem;
+    position: relative;
+}
+
+.header::after {
+    content:'';
+    background-image: url('../img/icons/header.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    width: 1.4rem;
+    height: 1.4rem;
+    right: 1rem;
+    top: .5rem;
+}
+
+.header .photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.title {
+    font-weight: 300;
+}
+
+.header .title {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.6rem;
+}
+
+.main {
+    margin: .5rem;
+    padding: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 2rem;
+}
+
+.main::before {
+    content:'';
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+a {
+    color: #ffff;
+    text-decoration: none;
+    align-self: center;
+}
+
+a:hover {
+    color: #ffff;
+    text-decoration: underline;
+}
+
+.personal-info p {
+    margin: .3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.personal-info p::before {
+    content:'';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.personal-info .job::before {
+    background-image: url('../img/icons/job.svg');
+}
+
+.personal-info .location::before {
+    background-image: url('../img/icons/location.svg');
+}
+
+.personal-info .phone::before {
+    background-image: url('../img/icons/phone.svg');
+}
+
+.personal-info .email::before {
+    background-image: url('../img/icons/email.svg');
+}
+
+.personal-info .links {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-right: 1rem;
+    border-radius: 5px;
+
+}
+
+.personal-info .links img {
+    border-radius: .3rem;
+}
+
+@media only screen and (min-width: 768px){
+
+
+    .header {
+        display: grid;
+        justify-items: center;
+        grid-template-areas: "photo title" "photo personal-info" "photo links";
+    }
+
+    .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+        margin-right: 3rem;
+    }
+
+    .header .title {
+        grid-area: title;
+        max-width: 300px;
+    }
+
+    .header .personal-info {
+        grid-area: personal-info;
+    }
+
+}

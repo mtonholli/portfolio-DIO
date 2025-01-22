@@ -1,0 +1,39 @@
+/* Estilização da subcategoria Experiencia Profissional */
+
+.experience {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience li {
+    margin-bottom: 1rem;
+}
+
+.experience li .period {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    margin-bottom: .75rem;
+}
+
+.experience .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: .75rem;
+    font-weight: 600;
+}
+
+.experience li .period::before {
+    content:'';
+    display: inline-block;
+    width: 1rem;                              
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/icons/calendar.svg');
+    margin-right: .5rem;
+}

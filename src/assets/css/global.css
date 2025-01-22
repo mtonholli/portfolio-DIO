@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #131313;
+    color: #ffffff;
+}
+
+.main {
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 768px){
+
+    .main {
+        max-width: 1024px;
+        margin: 1rem auto;
+        
+        
+    }
+}
