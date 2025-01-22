@@ -1,3 +1,6 @@
+/* Implementação da funcionalidade de collapse dos menus */
+
+
 const acordeonTriggers = document.querySelectorAll('.acordeon .trigger')
 
 acordeonTriggers.forEach((trigger) => {
